@@ -1,13 +1,24 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace je_test.Tests
 {
-    public class FirstTest
+    public class JeApiTest
     {
         [Test]
-        public void add_two_numbers()
+        public void can_get_data_from_just_eat()
         {
-            Assert.That(2 + 2, Is.EqualTo(4));
+            var jeApiClient = new JeApiClient();
+            var restaurants = jeApiClient.GetRestaurants();
+            Assert.That(restaurants, Is.Not.Null);
+        }
+    }
+
+    public class JeApiClient
+    {
+        public object GetRestaurants()
+        {
+            return new { };
         }
     }
 }
