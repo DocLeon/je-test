@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "je-test.Tests", "test\je-test.Tests\je-test.Tests.csproj", "{762CEBC2-D05E-40CA-A9A3-41D0E9B27D1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeRestaurantService", "JeRestaurantService\JeRestaurantService.csproj", "{C8BC2691-B294-4FA4-A940-85D606053850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{762CEBC2-D05E-40CA-A9A3-41D0E9B27D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{762CEBC2-D05E-40CA-A9A3-41D0E9B27D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{762CEBC2-D05E-40CA-A9A3-41D0E9B27D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8BC2691-B294-4FA4-A940-85D606053850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8BC2691-B294-4FA4-A940-85D606053850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8BC2691-B294-4FA4-A940-85D606053850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8BC2691-B294-4FA4-A940-85D606053850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
