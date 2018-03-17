@@ -12,16 +12,20 @@ namespace JeRestaurantService
             _display = display;            
         }
 
-        public void Display(IList<Restaurant> restaraunts)
+        public void Display(IList<Restaurant> restaurants)
         {
-            _display.Write($"Restaurant: {restaraunts[0].Name}");
-            var cuisineList = new StringBuilder();
-            foreach (var cuisine in restaraunts[0].CuisineTypes)
-            {
-                cuisineList.Append($"{cuisine.Name}, ");
+            foreach (var restaurant in restaurants)
+            { 
+                _display.Write($"Restaurant: {restaurant.Name}");
+                var cuisineList = new StringBuilder();
+                foreach (var cuisine in restaurant.CuisineTypes)
+                {
+                    cuisineList.Append($"{cuisine.Name}, ");
+                }
+                _display.Write($"Cuisines: {cuisineList.ToString().TrimEnd(' ', ',')}");
+                _display.Write($"Rating: {restaurant.RatingAverage}");
             }
             
-            _display.Write($"Cuisines: {cuisineList.ToString().TrimEnd(' ', ',')}");
         }
     }
 }
