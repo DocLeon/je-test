@@ -7,12 +7,15 @@ using JeRestaurantService;
 
 namespace RestaurantsInOutCode
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
+            string outCode = "SE19";
+            if (0 < args.Length) outCode = args[0];
+            if (string.IsNullOrEmpty(outCode)) outCode = "SE19"; 
             var jeApi = new JeApiClient();
-            var restaurants = jeApi.GetRestaurantsFor("SE19");
+            var restaurants = jeApi.GetRestaurantsFor(outCode);
             var displayAdapter = new DisplayAdapter(new ConsoleDisplay());
             displayAdapter.Display(restaurants.Restaurants);
             Console.WriteLine();
