@@ -17,15 +17,20 @@ namespace JeRestaurantService
             foreach (var restaurant in restaurants)
             { 
                 _display.Write($"Restaurant: {restaurant.Name}");
-                var cuisineList = new StringBuilder();
-                foreach (var cuisine in restaurant.CuisineTypes)
-                {
-                    cuisineList.Append($"{cuisine.Name}, ");
-                }
-                _display.Write($"Cuisines: {cuisineList.ToString().TrimEnd(' ', ',')}");
+                _display.Write($"Cuisines: {BuildListOfCuisines(restaurant)}");
                 _display.Write($"Rating: {restaurant.RatingAverage}");
             }
             
+        }
+
+        private static string BuildListOfCuisines(Restaurant restaurant)
+        {
+            var cuisineList = new StringBuilder();
+            foreach (var cuisine in restaurant.CuisineTypes)
+            {
+                cuisineList.Append($"{cuisine.Name}, ");
+            }
+            return cuisineList.ToString().TrimEnd(' ', ',');
         }
     }
 }
